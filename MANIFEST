@@ -6,4 +6,7 @@ lib/DateTime/Format/Roman.pm
 t/001_load.t
 t/002_calc.t
 t/003_format.t
+t/004_default.t
+t/pod.t
 Makefile.PL
+META.yml                                 Module meta-data (added by MakeMaker)

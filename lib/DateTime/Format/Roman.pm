@@ -4,9 +4,9 @@ use strict;
 
 use vars qw($VERSION);
 
-$VERSION = 0.02;
+$VERSION = 0.03;
 
-use DateTime 0.12;
+use DateTime 0.22;
 
 use Roman;
 use Params::Validate qw/validate SCALAR ARRAYREF/;
@@ -14,7 +14,8 @@ use Params::Validate qw/validate SCALAR ARRAYREF/;
 sub new {
     my $class = shift;
     my %p = validate( @_,
-                      { pattern => {type  => SCALAR | ARRAYREF }, 
+                      { pattern => {type  => SCALAR | ARRAYREF,
+                                    default => '%Od %2f %B %Oy' }, 
                       } );
 
     $p{pattern} = [$p{pattern}] unless ref $p{pattern};
@@ -41,8 +42,16 @@ my %formats;
       'y' => sub { $dt_elem{year} },
     );
 
+my $default_formatter;
+
 sub format_datetime {
     my ($self, $dt) = @_;
+
+    unless (ref $self) {
+        # Called as a class method
+        $default_formatter ||= $self->new();
+        $self = $default_formatter;
+    }
 
     %dt_elem = DateTime::Format::Roman->date_elements($dt);
 
@@ -136,15 +145,32 @@ DateTime::Format::Roman - Roman day numbering for DateTime objects
 
 =head1 DESCRIPTION
 
-TODO
+This module formats dates in the Roman style.
+
+The Romans expressed their dates in relation to three fixed dates per
+month. For example: the Ides of March was the 15th of that month; 14
+March was called "2 Ides", 13 March was called "3 Ides", etcetera. The
+days in the second half of the month were named after the first day of
+the next month, the "Kalends"; e.g. 16 March was called "17 Kalends of
+April".
 
 =head1 METHODS
 
 =over 4
 
-=item * new( ... )
+=item * new( pattern => $string )
+
+Creates a new formatter object. The optional formatting pattern defines
+the format of the output of format_datetime(). If no formatting pattern
+is given, a reasonable default is used.
 
 =item * format_datetime($datetime)
+
+Retruns the formatted string. This method can be called on a formatter
+object (created by new()), or it can be called as a class method. In the
+latter case, the default pattern is used.
+
+=back
 
 =head2 PATTERN SPECIFIERS
 
@@ -188,6 +214,13 @@ The year as a decimal number.
 If a specifier is preceded by 'O' or 'o', numbers will be written in
 uppercase and lowercase Roman numerals, respectively.
 
+The %f specifier accepts an additional argument of 1 digit, specifying
+the length of the output:
+
+    %0f : abbreviated name (e.g. "Kal")
+    %1f : full name (e.g. "Kalends")
+    %2f : one-letter abbreviation (e.g. "K")
+
 =head1 SUPPORT
 
 Support for this module is provided via the datetime@perl.org email
@@ -203,9 +236,9 @@ Eugene van der Pijll <pijll@gmx.net>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2003 Eugene van der Pijll.  All rights reserved.  This
-program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
+Copyright (c) 2003, 2004 Eugene van der Pijll.  All rights reserved.
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
