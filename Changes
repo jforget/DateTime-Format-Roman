@@ -1,4 +1,7 @@
 Revision history for Perl module DateTime::Format::Roman
 
+0.02  ii non iun anno mmiij
+    - added Roman.pm as a prerequisite
+
 0.01  iv non iun anno mmiij
     - original version, released to CPAN
