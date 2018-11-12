@@ -1,6 +1,6 @@
 #
 #     Perl extension to display date with the Roman style
-#     Copyright (C) 2003, 2004, 2018 Eugene Pjill and Jean Forget
+#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll and Jean Forget
 #
 #     See the license in the embedded documentation below.
 #

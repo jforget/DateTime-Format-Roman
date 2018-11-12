@@ -1,6 +1,6 @@
 #
 #     Configuration script for DateTime::Format::Roman
-#     Copyright (C) 2003, 2004, 2018 Eugene Pjill and Jean Forget
+#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll and Jean Forget
 #
 #     This program is distributed under the same terms as Perl 5.28.0:
 #     GNU Public License version 1 or later and Perl Artistic License
