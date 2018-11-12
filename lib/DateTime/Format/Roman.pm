@@ -4,7 +4,7 @@ use strict;
 
 use vars qw($VERSION);
 
-$VERSION = 0.03;
+$VERSION = 0.04;
 
 use DateTime 0.22;
 
@@ -33,8 +33,8 @@ my @fixed_days_names = (
 my %dt_elem;
 my %formats;
 %formats =
-    ( 'b' => sub { (shift->language->month_abbreviations)->[$dt_elem{month}-1] },
-      'B' => sub { (shift->language->month_names)->[$dt_elem{month}-1] },
+    ( 'b' => sub { (shift->language->month_format_abbreviated)->[$dt_elem{month}-1] },
+      'B' => sub { (shift->language->month_format_wide)       ->[$dt_elem{month}-1] },
       'd' => sub { $dt_elem{day} },
       'D' => sub { ($dt_elem{day} ne 1 && $dt_elem{day}.' ') . $formats{f}->(@_) },
       'f' => sub { $fixed_days_names[$_[1]||0]{$dt_elem{fixed_day}} },
