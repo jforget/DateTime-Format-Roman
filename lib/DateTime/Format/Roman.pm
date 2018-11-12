@@ -1,3 +1,9 @@
+#
+#     Perl extension to display date with the Roman style
+#     Copyright (C) 2003, 2004, 2018 Eugene Pjill and Jean Forget
+#
+#     See the license in the embedded documentation below.
+#
 package DateTime::Format::Roman;
 
 use strict;
@@ -238,10 +244,34 @@ Co-maintainer: Jean Forget <JFORGET@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2003, 2004, 2018 Eugene van der Pijll and Jean Forget.  All rights reserved.
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+Copyright (c) 2003,  2004, 2018 Eugene van der Pijll  and Jean Forget.
+All  rights  reserved.   This  program  is  free   software;  you  can
+redistribute it and/or modify it under the same terms as Perl itself.
 
+This program is  distributed under the same terms  as Perl 5.28.0: GNU
+Public License version 1 or later and Perl Artistic License
+
+You can find the text of the licenses in the F<LICENSE> file or at
+L<http://www.perlfoundation.org/artistic_license_1_0> and
+L<http://www.gnu.org/licenses/gpl-1.0.html>.
+
+Here is the summary of GPL:
+
+This program is  free software; you can redistribute  it and/or modify
+it under the  terms of the GNU General Public  License as published by
+the Free  Software Foundation; either  version 1, or (at  your option)
+any later version.
+
+This program  is distributed in the  hope that it will  be useful, but
+WITHOUT   ANY  WARRANTY;   without  even   the  implied   warranty  of
+MERCHANTABILITY  or FITNESS  FOR A  PARTICULAR PURPOSE.   See  the GNU
+General Public License for more details.
+
+You  should have received  a copy  of the  GNU General  Public License
+along with this program; if not, see <http://www.gnu.org/licenses/> or
+write to the Free Software Foundation, Inc., L<http://fsf.org>.
+
+=cut
 
 =head1 SEE ALSO
 
