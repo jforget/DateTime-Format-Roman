@@ -25,16 +25,16 @@ sub new {
 }
 
 my @fixed_days_names = (
-    { Kal => 'Kal', Non => 'Non', Id => 'Id' },
-    { Kal => 'K', Non => 'N', Id => 'Id' },
+    { Kal => 'Kal'    , Non => 'Non'  , Id => 'Id'   },
+    { Kal => 'K'      , Non => 'N'    , Id => 'Id'   },
     { Kal => 'Kalends', Non => 'Nones', Id => 'Ides' },
 );
 
 my %dt_elem;
 my %formats;
 %formats =
-    ( 'b' => sub { (shift->language->month_format_abbreviated)->[$dt_elem{month}-1] },
-      'B' => sub { (shift->language->month_format_wide)       ->[$dt_elem{month}-1] },
+    ( 'b' => sub { (shift->locale->month_format_abbreviated)->[$dt_elem{month}-1] },
+      'B' => sub { (shift->locale->month_format_wide)       ->[$dt_elem{month}-1] },
       'd' => sub { $dt_elem{day} },
       'D' => sub { ($dt_elem{day} ne 1 && $dt_elem{day}.' ') . $formats{f}->(@_) },
       'f' => sub { $fixed_days_names[$_[1]||0]{$dt_elem{fixed_day}} },
@@ -83,7 +83,7 @@ sub date_elements {
 
     my ($d, $m, $y) = ($dt->day, $dt->month, $dt->year);
     my $nones = _nones($m);
-    my $ides = $nones + 8;
+    my $ides  = $nones + 8;
 
     my %retval;
 
@@ -232,13 +232,16 @@ returned.
 
 =head1 AUTHOR
 
-Eugene van der Pijll <pijll@gmx.net>
+First author: Eugene van der Pijll <pijll@gmx.net>
+
+Co-maintainer: Jean Forget <JFORGET@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2003, 2004 Eugene van der Pijll.  All rights reserved.
+Copyright (c) 2003, 2004, 2018 Eugene van der Pijll and Jean Forget.  All rights reserved.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
+
 
 =head1 SEE ALSO
 
