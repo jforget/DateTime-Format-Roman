@@ -29,10 +29,34 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME         => 'DateTime::Format::Roman',
     VERSION_FROM => 'lib/DateTime/Format/Roman.pm',
-    PREREQ_PM    => { DateTime => 0.12,
-                      Roman    => 0,
+    PREREQ_PM    => { DateTime 	 => 0.22,
+                      Roman    	 => 0,
                       Test::More => 0,
+                     'strict'      => 0,
+                     'warnings'    => 0,
                        },
-    AUTHOR       => 'Eugene van der Pijll (pijll@gmx.net)',
+    AUTHOR       => [ 'Eugene van der Pijll (pijll@gmx.net)', 'Jean Forget <JFORGET@cpan.org>' ],
     ABSTRACT     => 'Roman day names (kalends, ides, nones) for DateTime objects',
+    LICENSE        => 'perl',
+    BUILD_REQUIRES => { 'Test::More'         => '0',        # should be 'TEST_REQUIRES', except that ExtUtils::MakeMaker 6.5705 does not accept it
+                        'ExtUtils::MakeMaker' => '6.57_02', # the first version to accept several authors in an arrayref
+                           },
+    MIN_PERL_VERSION => '5.6.1',
+    META_MERGE       => {
+       dynamic_config => 0,
+       provides       => {
+           'DateTime::Format::Roman' => {
+                file => 'lib/DateTime/Format/Roman.pm',
+                version => '0.04',
+           },
+       },
+       'meta-spec' => { version => 2 },
+       resources => {
+           repository => {
+               type => 'git',
+               url  => 'https://github.com/jforget/DateTime-Format-Roman.git',
+               web  => 'https://github.com/jforget/DateTime-Format-Roman',
+           },
+       },
+    },
 );
