@@ -7,6 +7,7 @@
 package DateTime::Format::Roman;
 
 use strict;
+use warnings;
 
 use vars qw($VERSION);
 
