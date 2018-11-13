@@ -58,5 +58,34 @@ WriteMakefile(
                web  => 'https://github.com/jforget/DateTime-Format-Roman',
            },
        },
+       prereqs => {
+         build => {
+           requires => {
+             'strict'                         => 0,
+             'warnings'                       => 0,
+           },
+         },
+         runtime => {
+           requires => {
+             'vars'                           => 0,
+             'strict'                         => 0,
+             'warnings'                       => 0,
+             'DateTime'                       => '0.22',
+             'Roman'                          => 0,
+             'Params::Validate'               => 0,
+             'perl'                           => '5.6.1',
+           },
+         },
+         test => {
+           requires => {
+             'Test::More'                     => '0',
+             'strict'                         => 0,
+             'warnings'                       => 0,
+           },
+           recommends => {
+             'Test::Pod'                      => '0',
+           },
+         },
+       },
     },
 );
