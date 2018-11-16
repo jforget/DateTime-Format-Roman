@@ -131,7 +131,9 @@ sub _nones {
     return 5;
 }
 
-1;
+# Instead of using a boring "1" ending value:
+'Ils sont fous, ces romains !';
+
 __END__
 
 =head1 NAME
@@ -253,8 +255,8 @@ This program is  distributed under the same terms  as Perl 5.28.0: GNU
 Public License version 1 or later and Perl Artistic License
 
 You can find the text of the licenses in the F<LICENSE> file or at
-L<http://www.perlfoundation.org/artistic_license_1_0> and
-L<http://www.gnu.org/licenses/gpl-1.0.html>.
+L<https://dev.perl.org/licenses/artistic.html> and
+L<https://www.gnu.org/licenses/gpl-1.0.html>.
 
 Here is the summary of GPL:
 
@@ -268,11 +270,9 @@ WITHOUT   ANY  WARRANTY;   without  even   the  implied   warranty  of
 MERCHANTABILITY  or FITNESS  FOR A  PARTICULAR PURPOSE.   See  the GNU
 General Public License for more details.
 
-You  should have received  a copy  of the  GNU General  Public License
-along with this program; if not, see <http://www.gnu.org/licenses/> or
-write to the Free Software Foundation, Inc., L<http://fsf.org>.
-
-=cut
+You should  have received  a copy  of the  GNU General  Public License
+along with  this program; if not,  see <https://www.gnu.org/licenses/>
+or write to the Free Software Foundation, Inc., L<https://fsf.org>.
 
 =head1 SEE ALSO
 
