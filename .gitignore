@@ -1,6 +1,9 @@
 *~
+*gz
+blib
+cover_db
 MYMETA.json
 MYMETA.yml
 Makefile
-blib
+Makefile.old
 pm_to_blib
