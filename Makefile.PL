@@ -1,6 +1,6 @@
 #
 #     Configuration script for DateTime::Format::Roman
-#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll and Jean Forget
+#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll, Dave Rolsky and Jean Forget
 #
 #     This program is distributed under the same terms as Perl 5.28.0:
 #     GNU Public License version 1 or later and Perl Artistic License
@@ -35,7 +35,9 @@ WriteMakefile(
                      'strict'      => 0,
                      'warnings'    => 0,
                        },
-    AUTHOR       => [ 'Eugene van der Pijll (pijll@gmx.net)', 'Jean Forget <JFORGET@cpan.org>' ],
+    AUTHOR       => [ 'Eugene van der Pijll (pijll@gmx.net)'
+                    , 'Dave Rolsky <autarch@urth.org>'
+                    , 'Jean Forget <JFORGET@cpan.org>' ],
     ABSTRACT     => 'Roman day names (kalends, ides, nones) for DateTime objects',
     LICENSE        => 'perl',
     BUILD_REQUIRES => { 'Test::More'         => '0',        # should be 'TEST_REQUIRES', except that ExtUtils::MakeMaker 6.5705 does not accept it

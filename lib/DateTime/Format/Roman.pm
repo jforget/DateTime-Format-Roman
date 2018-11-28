@@ -1,6 +1,6 @@
 #
 #     Perl extension to display date with the Roman style
-#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll and Jean Forget
+#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll, Dave Rolsky and Jean Forget
 #
 #     See the license in the embedded documentation below.
 #
@@ -243,13 +243,16 @@ returned.
 
 First author: Eugene van der Pijll <pijll@gmx.net>
 
-Co-maintainer: Jean Forget <JFORGET@cpan.org>
+Official co-maintainer: Dave Rolsky <autarch@urth.org>
+
+Unofficial co-maintainer: Jean Forget <JFORGET@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2003,  2004, 2018 Eugene van der Pijll  and Jean Forget.
-All  rights  reserved.   This  program  is  free   software;  you  can
-redistribute it and/or modify it under the same terms as Perl itself.
+Copyright (c) 2003,  2004, 2018 Eugene van der Pijll,  Dave Rolsky and
+Jean Forget. All  rights reserved. This program is  free software; you
+can redistribute  it and/or  modify it  under the  same terms  as Perl
+itself.
 
 This program is  distributed under the same terms  as Perl 5.28.0: GNU
 Public License version 1 or later and Perl Artistic License
