@@ -69,7 +69,6 @@ WriteMakefile(
          },
          runtime => {
            requires => {
-             'vars'                           => 0,
              'strict'                         => 0,
              'warnings'                       => 0,
              'DateTime'                       => '0.22',

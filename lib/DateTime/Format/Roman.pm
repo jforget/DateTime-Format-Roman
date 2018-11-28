@@ -9,9 +9,7 @@ package DateTime::Format::Roman;
 use strict;
 use warnings;
 
-use vars qw($VERSION);
-
-$VERSION = 0.04;
+our $VERSION = 0.04;
 
 use DateTime 0.22;
 
