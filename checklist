@@ -17,7 +17,7 @@ Check copyright years in:
 
 Check URL, replacing http by https when possible
 
-Kwalitee: compare with the previous version https://cpants.cpanauthors.org/release/PIJLL/DateTime-Format-Roman-0.03
+Kwalitee: compare with the previous version https://cpants.cpanauthors.org/release/JFORGET/DateTime-Format-Roman-0.04
 
 MANIFEST: among others, check that all new test files are mentionned
 
@@ -41,7 +41,7 @@ After release
 =============
 
 Github:
-    git tag -m 'Release to CPAN' v0.04
+    git tag -m 'Release to CPAN' v0.05
     git push --tags -u origin master
 
 Change version number in:

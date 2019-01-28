@@ -9,7 +9,7 @@ package DateTime::Format::Roman;
 use strict;
 use warnings;
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 use DateTime 0.22;
 
@@ -230,8 +230,8 @@ the length of the output:
 
 =head1 SUPPORT
 
-Support for this module is provided via the datetime@perl.org email
-list. See http://lists.perl.org/ for more details.
+Support for  this module is  provided via the  datetime@perl.org email
+list. See L<https://lists.perl.org/> for more details.
 
 Note that this is a beta release. The interface *will* change,
 especially the format specifiers, and the way the "fixed days" are

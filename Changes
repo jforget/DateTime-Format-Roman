@@ -1,7 +1,11 @@
 Revision history for Perl module DateTime::Format::Roman
 
-0.04  ?? mmxviii
+0.05  ?? anno mmxix
+    - ?????
+
+0.04  v kal feb anno mmxix
     - remove the warning about the month_abbreviations method (RT 69845)
+    - fix kwalitee issues
 
 0.03  xv kal nov anno mmiv
     - added default pattern
