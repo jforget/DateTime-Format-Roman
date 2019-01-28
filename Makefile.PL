@@ -1,12 +1,12 @@
 #
 #     Configuration script for DateTime::Format::Roman
-#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll, Dave Rolsky and Jean Forget
+#     Copyright (C) 2003, 2004, 2018, 2019 Eugene van der Pijll, Dave Rolsky and Jean Forget
 #
 #     This program is distributed under the same terms as Perl 5.28.0:
 #     GNU Public License version 1 or later and Perl Artistic License
 #
 #     You can find the text of the licenses in the F<LICENSE> file or at
-#     L<http://www.perlfoundation.org/artistic_license_1_0>
+#     L<https://dev.perl.org/licenses/artistic.html>
 #     and L<https://www.gnu.org/licenses/gpl-1.0.html>.
 #
 #     Here is the summary of GPL:
@@ -29,9 +29,9 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME         => 'DateTime::Format::Roman',
     VERSION_FROM => 'lib/DateTime/Format/Roman.pm',
-    PREREQ_PM    => { DateTime 	 => 0.22,
-                      Roman    	 => 0,
-                      Test::More => 0,
+    PREREQ_PM    => { DateTime     => 0.22,
+                      Roman        => 0,
+                      Test::More   => 0,
                      'strict'      => 0,
                      'warnings'    => 0,
                        },

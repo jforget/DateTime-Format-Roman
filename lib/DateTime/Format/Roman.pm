@@ -1,6 +1,6 @@
 #
 #     Perl extension to display date with the Roman style
-#     Copyright (C) 2003, 2004, 2018 Eugene van der Pijll, Dave Rolsky and Jean Forget
+#     Copyright (C) 2003, 2004, 2018, 2019 Eugene van der Pijll, Dave Rolsky and Jean Forget
 #
 #     See the license in the embedded documentation below.
 #
@@ -26,7 +26,7 @@ sub new {
     $p{pattern} = [$p{pattern}] unless ref $p{pattern};
 
     my $self = bless \%p, $class;
-	return $self;
+    return $self;
 }
 
 my @fixed_days_names = (
@@ -241,15 +241,15 @@ returned.
 
 First author: Eugene van der Pijll <pijll@gmx.net>
 
-Official co-maintainer: Dave Rolsky <autarch@urth.org>
+First co-maintainer: Dave Rolsky <autarch@urth.org>
 
-Unofficial co-maintainer: Jean Forget <JFORGET@cpan.org>
+Second co-maintainer: Jean Forget <JFORGET@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2003,  2004, 2018 Eugene van der Pijll,  Dave Rolsky and
-Jean Forget. All  rights reserved. This program is  free software; you
-can redistribute  it and/or  modify it  under the  same terms  as Perl
+Copyright (c) 2003, 2004, 2018, 2019 Eugene van der Pijll, Dave Rolsky
+and Jean Forget.  All rights reserved. This program  is free software;
+you can redistribute it and/or modify  it under the same terms as Perl
 itself.
 
 This program is  distributed under the same terms  as Perl 5.28.0: GNU
