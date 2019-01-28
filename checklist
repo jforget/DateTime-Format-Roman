@@ -1,0 +1,53 @@
+-*- encoding: utf-8; indent-tabs-mode: nil -*-
+
+See Merijn's checklist:
+https://github.com/Tux/Release-Checklist/blob/master/Checklist.md
+
+Check spaces vs tabs, check encoding
+
+Check version number in:
+-- README
+-- Makefile.PL
+-- (2x) lib/DateTime/Format/Roman.pm, code ($VERSION) and POD (=head1 VERSION)
+
+Check copyright years in:
+-- Makefile.PL
+-- (2x) lib/DateTime/Format/Roman.pm, code ($VERSION) and POD (=head1 COPYRIGHT)
+-- t/*.t
+
+Check URL, replacing http by https when possible
+
+Kwalitee: compare with the previous version https://cpants.cpanauthors.org/release/PIJLL/DateTime-Format-Roman-0.03
+
+MANIFEST: among others, check that all new test files are mentionned
+
+Test with all perlbrew versions
+
+Coverage: preferably with perlbrew perl-lgdbl (or later?)
+
+Changes: Type the proper release date for the latest version
+
+Build META.{json,yml} and .tar.gz with perlbrew perl-5.28.0
+
+Check contents of META.{json,yml}:
+  version number (2x)
+  minimum perl version
+  dynamic config 0
+  provides (with version number)
+  prerequisite: strict and warnings
+
+
+After release
+=============
+
+Github:
+    git tag -m 'Release to CPAN' v0.04
+    git push --tags -u origin master
+
+Change version number in:
+-- Changes
+-- Makefile.PL
+-- README
+-- lib/DateTime/Format/Roman.pm
+
+
