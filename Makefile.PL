@@ -1,6 +1,6 @@
 #
 #     Configuration script for DateTime::Format::Roman
-#     Copyright (C) 2003, 2004, 2018, 2019 Eugene van der Pijll, Dave Rolsky and Jean Forget
+#     Copyright (C) 2003, 2004, 2018, 2019, 2021 Eugene van der Pijll, Dave Rolsky and Jean Forget
 #
 #     This program is distributed under the same terms as Perl 5.28.0:
 #     GNU Public License version 1 or later and Perl Artistic License
@@ -58,6 +58,9 @@ WriteMakefile(
                type => 'git',
                url  => 'https://github.com/jforget/DateTime-Format-Roman.git',
                web  => 'https://github.com/jforget/DateTime-Format-Roman',
+           },
+           bugtracker => {
+               web  => 'https://github.com/jforget/DateTime-Format-Roman/issues',
            },
        },
        prereqs => {

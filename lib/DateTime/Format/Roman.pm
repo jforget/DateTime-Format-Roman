@@ -1,6 +1,6 @@
 #
 #     Perl extension to display date with the Roman style
-#     Copyright (C) 2003, 2004, 2018, 2019 Eugene van der Pijll, Dave Rolsky and Jean Forget
+#     Copyright (C) 2003, 2004, 2018, 2019, 2021 Eugene van der Pijll, Dave Rolsky and Jean Forget
 #
 #     See the license in the embedded documentation below.
 #
@@ -230,12 +230,33 @@ the length of the output:
 
 =head1 SUPPORT
 
+Note  that  this is  a  beta  release.  The interface  *will*  change,
+especially the  format specifiers,  and the way  the "fixed  days" are
+returned.
+
 Support for  this module is  provided via the  datetime@perl.org email
 list. See L<https://lists.perl.org/> for more details.
 
-Note that this is a beta release. The interface *will* change,
-especially the format specifiers, and the way the "fixed days" are
-returned.
+Please   report  any   bugs   or  feature   requests   to  Github   at
+C<https://github.com/jforget/DateTime-Format-Roman>,  and   create  an
+issue or submit a pull request.
+
+If you have no  feedback after a week or so, try to  reach me by email
+at JFORGET  at cpan  dot org.  The notification  from Github  may have
+failed to reach  me. In your message, please  mention the distribution
+name in the subject, so my spam  filter and I will easily dispatch the
+email to the proper folder.
+
+On the other  hand, I may be  on vacation or away from  Internet for a
+good  reason. Do  not be  upset if  I do  not answer  immediately. You
+should write  me at a leasurely  rythm, about once per  month, until I
+react.
+
+If after about six  months or a year, there is  still no reaction from
+me, you can worry and start the CPAN procedure for module adoption.
+See L<https://groups.google.com/g/perl.module-authors/c/IPWjASwuLNs>
+L<https://www.cpan.org/misc/cpan-faq.html#How_maintain_module>
+and L<https://www.cpan.org/misc/cpan-faq.html#How_adopt_module>.
 
 =head1 AUTHOR
 
@@ -247,10 +268,10 @@ Second co-maintainer: Jean Forget <JFORGET@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2003, 2004, 2018, 2019 Eugene van der Pijll, Dave Rolsky
-and Jean Forget.  All rights reserved. This program  is free software;
-you can redistribute it and/or modify  it under the same terms as Perl
-itself.
+Copyright (c) 2003, 2004, 2018, 2019,  2021 Eugene van der Pijll, Dave
+Rolsky  and Jean  Forget. All  rights reserved.  This program  is free
+software;  you can  redistribute it  and/or modify  it under  the same
+terms as Perl itself.
 
 This program is  distributed under the same terms  as Perl 5.28.0: GNU
 Public License version 1 or later and Perl Artistic License

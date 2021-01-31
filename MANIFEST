@@ -2,6 +2,7 @@ MANIFEST
 LICENSE
 README
 Changes
+CONTRIBUTING
 lib/DateTime/Format/Roman.pm
 t/001_load.t
 t/002_calc.t
